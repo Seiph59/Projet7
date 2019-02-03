@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet"/>
+    <h1>Bienvenue sur la page de GrandPy Bot !</h1>
+        <div class="container">
+                <div class="row">
+                <div class="col-lg-offset-1 col-lg-10">
+                    <div id="chat">
+                            <section>
+                                <form method="post" action="????">
+                                    <p><input type="text" id="champs" name="input_address" autofocus placeholder="Donne moi ton adresse, que je te raconte une anecdote !" /></p>
+                                    <!-- <input id="submit_button" type="submit" value="->" /> -->
+                                    </form>
+
+                                </section></div>
+                    </div>
+
+                </div>
+                    <div class="row">
+                    <div class="col-lg-6">Emplacement Map</div>
+                    <div class="col-lg-6">Descriptif Wiki</div>
+                    </div>
+        </div>
+{% endblock content %}

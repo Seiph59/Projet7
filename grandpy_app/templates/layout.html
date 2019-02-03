@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if title %}
+        <title>Bienvenue dans l'application GrandPy Bot </title>
+    {% else %}
+        <title> Grandpy Bot </title>
+    {% endif %}
+</head>
+<body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" id="header"> Bienvenue sur le site de Grandpy Bot ! <img src="{{ url_for('static', filename='logo_robot.png')}}" align="center"</div>
+            </div>
+        </div>
+        <div class="container">
+                <nav class="navbar navbar-inverse">
+                  <div class="container">
+                    <ul class="nav navbar-nav">
+                     <li class="active"> <a href="{{ url_for('home') }}">Accueil</a> </li>
+                     <li> <a href="{{url_for('about') }}">A propos</a> </li>
+                    </ul>
+                    <form class="navbar-form navbar-right inline-form">
+                      </div>
+                    </form>
+                  </div>
+                </nav>
+    {% block content %}{% endblock %}
+
+    <footer class="row" id="pied">
+        <div class="col-lg-12">
+                Damien Galasso 2019
+                <a href="https://github.com/Seiph59"> Github</a>
+                <a href="https://www.linkedin.com/in/damien-g-60109523/"> Linkedin</a>
+        </div>
+    </footer>
+</body>
+</html>
