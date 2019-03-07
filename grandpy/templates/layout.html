@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if title %}
         <title>Bienvenue dans l'application GrandPy Bot </title>
@@ -14,7 +14,7 @@
 <body>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12" id="header"> Bienvenue sur le site de Grandpy Bot ! <img src="{{ url_for('static', filename='logo_robot.png')}}" align="center"</div>
+                <div class="col-lg-12" id="header"> Bienvenue sur le site de Grandpy Bot ! <img src="{{ url_for('static', filename='images/logo_robot.png')}}" ></div>
             </div>
         </div>
         <div class="container">
@@ -34,8 +34,8 @@
     <footer class="row" id="pied">
         <div class="col-lg-12">
                 Damien Galasso 2019
-                <a href="https://github.com/Seiph59"> Github</a>
-                <a href="https://www.linkedin.com/in/damien-g-60109523/"> Linkedin</a>
+                <a href="https://github.com/Seiph59"><img src="{{ url_for('static', filename='images/github.png')}}" class="logos" ></a>
+                <a href="https://www.linkedin.com/in/damien-g-60109523/"><img src="{{ url_for('static', filename='images/linkedin.png')}}" class="logos" ></a>
         </div>
     </footer>
 </body>

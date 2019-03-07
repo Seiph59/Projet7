@@ -1,11 +1,12 @@
-/*h1 {
+h1 {
 
     text-align: center;
-}*/
+}
 
 #header{
     font-size: 40px;
     text-align: center;
+    align-content: center;
 }
 
 body {
@@ -16,9 +17,9 @@ body {
     position: relative;
     border: 2px solid black;
     height: 450px;
-    width: 50%;
+    /*width: 640px;*/
     background-color:burlywood;
-    margin-left: 15%;
+    /*margin-left: 20%; */
     /*opacity: 0.5;*/
     border-radius: 10px;
 }
@@ -30,7 +31,21 @@ body {
     text-align: center;
 }
 
-#champs{
+.conversation{
+    position: absolute;
+    right: 5px;
+    font-size: 20px;
+    list-style: none;
+    color: black;
+    background-color: rgb(130, 219, 130);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: 5px;
+}
+
+#question{
     position:absolute;
     left: 0px;
     bottom: 0px;
@@ -43,10 +58,16 @@ body {
 }
 
 #submit_button{
-    position: absolute;
+    position: relative;
     bottom: 0px;
     align-content: center;
     background-color: white;
     color: black;
-    align-self: center;
+    align-self: right;
+}
+
+.logos
+{
+    width:20px;
+    height:20px;
 }
