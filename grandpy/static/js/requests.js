@@ -14,7 +14,15 @@ questionElt.addEventListener('keypress', (event) =>{
             console.log("Requete envoyée " + reponse + " !");
         } )
 
-        document.getElementById("start_convers")
+        var enter = true;
+        if (enter == true);
+            var divElt = document.createElement("div");
+            var paraElt = document.createElement("p");
+            paraElt.className = "user-conversation";
+            paraElt.textContent = questionElt.value;
+            var asso = divElt.appendChild(paraElt)
+            document.getElementById("chat").appendChild(asso);
+            enter = false;
     }
 });
 

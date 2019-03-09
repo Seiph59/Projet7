@@ -10,18 +10,16 @@ h1 {
 }
 
 body {
-    background-color:darkslategrey;
-    color:whitesmoke;
+    background-color:#626C66;
+    color:#E1CA96;
 }
 #chat{
     position: relative;
     border: 2px solid black;
     height: 450px;
-    /*width: 640px;*/
-    background-color:burlywood;
-    /*margin-left: 20%; */
-    /*opacity: 0.5;*/
+    background-color: #E1CA96;
     border-radius: 10px;
+    overflow-y:auto;
 }
 
 #pied{
@@ -31,34 +29,45 @@ body {
     text-align: center;
 }
 
-.conversation{
-    position: absolute;
-    right: 5px;
+.grandpy_react{
+    margin-right: 10px;
+    text-align:right;
     font-size: 20px;
-    list-style: none;
     color: black;
-    background-color: rgb(130, 219, 130);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    background-color: #ACA885;
+    border: 1px #918B76;
+    border-radius: 5px;
     top: 5px;
 }
 
+.user-conversation{
+    margin-left: 10px;
+    text-align: left;
+    font-size: 20px;
+    color:black;
+    background-color:#918B76;
+    border: 1px #ACA885;
+    border-radius: 5px;
+}
+
+#navbar{
+    background-color:#263128;
+}
+
 #question{
-    position:absolute;
+    position: absolute;
     left: 0px;
     bottom: 0px;
     width: 100%;
     background-color: white;
     color:black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     border:1px solid black;
 }
 
 #submit_button{
-    position: relative;
+    position: fixed;
     bottom: 0px;
     align-content: center;
     background-color: white;
