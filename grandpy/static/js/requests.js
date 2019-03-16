@@ -14,15 +14,23 @@ questionElt.addEventListener('keypress', (event) =>{
             console.log("Requete envoyée " + reponse + " !");
         } )
 
-        var enter = true;
-        if (enter == true);
-            var divElt = document.createElement("div");
-            var paraElt = document.createElement("p");
-            paraElt.className = "user-conversation";
-            paraElt.textContent = questionElt.value;
-            var asso = divElt.appendChild(paraElt)
-            document.getElementById("chat").appendChild(asso);
-            enter = false;
+        var divElt = document.createElement("div");
+        divElt.className = "user-conversation";
+        var paraElt = document.createElement("p");
+        paraElt.textContent = questionElt.value;
+        var asso = divElt.appendChild(paraElt);
+        document.getElementById("chat").appendChild(asso).className = "user-conversation";
+        questionElt.value = "";
+
+        var divElt2 = document.createElement("div")
+        var paraElt2 = document.createElement("p");
+        paraElt2.textContent = "Ah je vois...Laisse moi quelques secondes pour me souvenir";
+        var asso2 = divElt.appendChild(paraElt2);
+        document.getElementById("chat").appendChild(asso2).className = "grandpy_react";
+
+        divElt3 = document.createElement("div");
+        document.getElementById("chat").appendChild(divElt3).className = "map";
+
     }
 });
 

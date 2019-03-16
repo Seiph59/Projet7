@@ -1,3 +1,4 @@
 envi/
 .pytest_cache
 __pycache__
+grandpy/appli/config.py

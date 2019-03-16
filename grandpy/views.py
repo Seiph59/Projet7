@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
 import json
 from appli.question_parser import Parser
+from config import SECRET_KEY
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = '3e58fbf601a27176a461'
+app.config['SECRET_KEY'] = SECRET_KEY
 
 @app.route('/')
 @app.route('/home')

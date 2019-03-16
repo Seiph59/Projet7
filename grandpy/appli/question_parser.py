@@ -13,7 +13,7 @@ class Parser():
 
     def sentence_parsed(self, sentence):
         list = sentence.split(" ")
-        if len(list) <= 1:
+        if len(list) < 1:
             raise AssertionError()
         path_parser = os.path.dirname(__file__)
         fpath = os.path.join(path_parser, '..', 'ressources', 'stop_words.json')
