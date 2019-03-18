@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import json
 from appli.question_parser import Parser
-from config import SECRET_KEY
+from appli.config import SECRET_KEY
 
 app = Flask(__name__)
 
