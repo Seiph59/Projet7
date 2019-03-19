@@ -1,18 +1,23 @@
 import requests
-from config import API_GOOGLE_MAP_KEY
+import config
 
-geocode_url = "https://maps.googleapis.com/maps/api/geocode/json"
+def request_api_google(input_address):
 
-criteria_api = {
-    'address': '89 Rue Carnot, Noyelles-Godault',
-    'country' : 'FR',
-    'key' : API_GOOGLE_MAP_KEY
+    criteria_api = {
+        'address': input_address,
+        'country' : 'FR',
+        'key' : API_GOOGLE_MAP_KEY
+    }
 
-}
-req = requests.get(geocode_url, params=criteria_api)
-res = req.json()
+    req = requests.get(GEOCODE_URL, params=criteria_api)
+    res = req.json()
 
-latitude = res['results'][0]['geometry']['location']['lat']
-longitude = res['results'][0]['geometry']['location']['lng']
+    latitude = res['results'][0]['geometry']['location']['lat']
+    longitude = res['results'][0]['geometry']['location']['lng']
 
-print("latitude: " + str(latitude) + " longitude: " + str(longitude))
+    #print("latitude: " + str(latitude) + " longitude: " + str(longitude))
+    return latitude, longitude
+
+""" address = '89 rue Carnot 62950 Noyelles-Godault'
+test = request_api_google(address)
+print(test[0], test[1]) """
