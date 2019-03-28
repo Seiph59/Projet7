@@ -1,14 +1,15 @@
 from flask import Flask, render_template, request
 import json
 from .appli.question_parser import Parser
-from .appli.api_googlemaps import request_api_google
-import config
+from .appli import googlemaps
+from .appli import api_wikisearch
+from config import SECRET_KEY
 
 app = Flask(__name__)
 
 app.config.from_object('config')
 
-#app.config['SECRET_KEY'] = SECRET_KEY
+app.config['SECRET_KEY'] = SECRET_KEY
 
 @app.route('/')
 @app.route('/home')
@@ -24,9 +25,11 @@ def test_ajax():
     tata = request.get_json()
     parse = Parser()
     question_for_api = parse.formated_question(tata['data'])
-    test = request_api_google(question_for_api)
-    print (test)
-    return question_for_api
+    coordinates_returned = googlemaps.api_request(question_for_api)
+    #print(coordinates_returned)
+    result_wiki = api_wikisearch.research_page(coordinates_returned)
+    #print(result_wiki)
+    return json.dumps(result_wiki).encode('utf8')
 
 
 if __name__ == "__main__":
