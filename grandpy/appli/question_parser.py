@@ -2,7 +2,9 @@ import json
 import os
 import sys
 
+
 class Parser():
+
     """ Class which will receive the text from
     the web application, then split, and keep only key words,
     to send to the API """

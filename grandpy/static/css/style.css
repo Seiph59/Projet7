@@ -16,10 +16,21 @@ body {
 #chat{
     position: relative;
     border: 2px solid black;
-    height: 450px;
+    height: 500px;
     background-color: #E1CA96;
     border-radius: 10px;
     overflow-y:auto;
+    overflow-x: hidden;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+   }
+
+#loader{
+    position: absolute;
+    visibility: hidden;
 }
 
 #pied{
