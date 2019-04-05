@@ -1,11 +1,22 @@
+"""
+File who manage the differents interactions with the API Wikipedia
+"""
+
 import requests
 
 URL = "https://fr.wikipedia.org/w/api.php"
 
-SEARCHPAGE = "6 place de l'étoile 75000 Paris"
-coordinates = '50.4238559|2.9977904'
+
+class WikiException(Exception):
+    """
+    Class used to generate a specific error_message.
+    """
+
 
 def search_coordinates(coordinates_input):
+    """
+    Method who received the coordinates from Flask, and return the page id
+    """
     criteria_api = {
         'action': "query",
         'list': "geosearch",
@@ -25,19 +36,21 @@ def search_coordinates(coordinates_input):
 
 
 def search_page_content(input_id):
-    PARAMS = {
-            'action': "query",
-            'pageids': input_id,
-            'prop': 'info|extracts',
-            'inprop': 'url',
-            'explaintext': 'true',
-            'exsentences': 2,
-            'format': "json"
-            }
+    """
+    Receive Page id to receive the page content associated
+    """
+    criteria_research = {
+        'action': "query",
+        'pageids': input_id,
+        'prop': 'info|extracts',
+        'inprop': 'url',
+        'explaintext': 'true',
+        'exsentences': 2,
+        'format': "json"
+        }
     try:
-        req = requests.get(URL, params=PARAMS)
+        req = requests.get(URL, params=criteria_research)
         res = req.json()
-        # print(res)
         url_page = res['query']['pages'][str(input_id)]['fullurl']
         intro_sentences = res['query']['pages'][str(input_id)]['extract']
         print(intro_sentences, url_page)
@@ -48,6 +61,10 @@ def search_page_content(input_id):
 
 
 def research_page(coordinates_list):
+    """
+    Intermediary method allowing to execute both requests above
+    with that one.
+    """
     lat = coordinates_list[0]
     lng = coordinates_list[1]
     coordinates_formated = str(lat) + '|' + str(lng)

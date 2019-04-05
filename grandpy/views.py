@@ -1,3 +1,7 @@
+"""
+Core file, displaying all the html pages, and receive ajax's requests.
+
+"""
 from flask import Flask, render_template, request, jsonify
 from config import SECRET_KEY
 from .appli.question_parser import Parser
@@ -14,30 +18,38 @@ app.config['SECRET_KEY'] = SECRET_KEY
 @app.route('/')
 @app.route('/home')
 def home():
+    """
+    Displaying the home page, by two differents manners (/home) or (/)
+    """
     return render_template('home.html')
 
 
 @app.route('/about')
 def about():
+    """
+    Displaying the about page, used to give developer's informations
+    """
     return render_template('about.html')
 
 
 @app.route('/user_question', methods=['POST'])
-def test_ajax():
+def ajax():
+    """
+    Method managing the differents communication between back-end(python)
+    and front-end(js)
+    """
     try:
-        tata = request.get_json()
+        user_question = request.get_json()
         parse = Parser()
-        question_for_api = parse.formated_question(tata['data'])
+        question_for_api = parse.formated_question(user_question['data'])
         coordinates = googlemaps.get_coords_from_address(question_for_api)
-        # print(coordinates_returned)
         result_wiki = api_wikisearch.research_page(coordinates)
-        # print(result_wiki)
         return jsonify(result_wiki, coordinates)
 
     except googlemaps.GoogleException as err:
         error = {'error': str(err)}
         return jsonify(error)
-    except:
+    except api_wikisearch.WikiException:
         error = {'error': " Désolé, une erreur technique s'est produite "}
         return jsonify(error)
 

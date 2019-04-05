@@ -1,6 +1,9 @@
+"""
+File receiving the user question, parsed and format the question
+to send then to the Google API.
+"""
 import json
 import os
-import sys
 
 
 class Parser():
@@ -10,10 +13,17 @@ class Parser():
     to send to the API """
 
     def delete_spaces(self, sentence):
+        """
+        Method which checks if there is no too much empty spaces
+        """
         input_without_spaces = sentence.strip()
         return input_without_spaces
 
     def sentence_parsed(self, sentence):
+        """
+        Check each word with the 'stop_words.json' file, to only send
+        the useful informations
+        """
         list = sentence.split(" ")
         if len(list) <= 1:
             raise AssertionError()
@@ -31,6 +41,9 @@ class Parser():
         return valid_words.strip()
 
     def formated_question(self, input_data):
+        """
+        Method to execute both methods of the parser
+        """
         clean_sentence = self.delete_spaces(input_data)
         formated_sentence = self.sentence_parsed(clean_sentence)
         return formated_sentence

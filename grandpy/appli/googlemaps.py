@@ -1,14 +1,20 @@
+"""
+File used to request to Google's API
+"""
 import requests
 from config import API_GOOGLE_MAP_KEY, GEOCODE_URL
 
-address = '89 rue Carnot 62950 Noyelles-Godault'
-
 
 class GoogleException(Exception):
-    pass
+    """
+    Class used to generate a specific error_message.
+    """
 
 
 def get_coords_from_address(input_address):
+    """
+    Send an address to the google Geocode API, to receive coordinates
+    """
     print(input_address)
     criteria_api = {
         'address': input_address,
