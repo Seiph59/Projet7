@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request, jsonify
-import json
+from config import SECRET_KEY
 from .appli.question_parser import Parser
 from .appli import googlemaps
 from .appli import api_wikisearch
-from config import SECRET_KEY
 
 app = Flask(__name__)
 

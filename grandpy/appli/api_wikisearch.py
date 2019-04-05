@@ -5,7 +5,6 @@ URL = "https://fr.wikipedia.org/w/api.php"
 SEARCHPAGE = "6 place de l'étoile 75000 Paris"
 coordinates = '50.4238559|2.9977904'
 
-
 def search_coordinates(coordinates_input):
     criteria_api = {
         'action': "query",
@@ -19,7 +18,6 @@ def search_coordinates(coordinates_input):
         req = requests.get(URL, params=criteria_api)
         res = req.json()
         id_page = res['query']['geosearch'][0]['pageid']
-        # print(id_page)
         return id_page
 
     except requests.exceptions.Timeout as out:
@@ -42,6 +40,7 @@ def search_page_content(input_id):
         # print(res)
         url_page = res['query']['pages'][str(input_id)]['fullurl']
         intro_sentences = res['query']['pages'][str(input_id)]['extract']
+        print(intro_sentences, url_page)
         return intro_sentences, url_page
 
     except KeyError:

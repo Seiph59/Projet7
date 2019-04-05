@@ -9,7 +9,7 @@ class GoogleException(Exception):
 
 
 def get_coords_from_address(input_address):
-
+    print(input_address)
     criteria_api = {
         'address': input_address,
         'country': 'FR',

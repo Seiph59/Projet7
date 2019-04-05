@@ -20,17 +20,20 @@ body {
     background-color: #E1CA96;
     border-radius: 10px;
     overflow-y:auto;
-    overflow-x: hidden;
 }
 
-#map {
-    height: 300px;
-    width: 100%;
-   }
+#img_load{
+    width: 70px;
+}
 
 #loader{
     position: absolute;
     visibility: hidden;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 50%;
+    z-index: 1000;
 }
 
 #pied{
@@ -38,11 +41,6 @@ body {
     bottom: 0;
     font-size: 15px;
     text-align: center;
-}
-
-.map{
-    height: 50px;
-    width: 90%;
 }
 
 .grandpy_react{

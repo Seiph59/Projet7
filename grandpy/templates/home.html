@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <h1>Bienvenue sur la page de GrandPy Bot !</h1>
         <div class="container">
+            <div id = "loader">
+                <img src="{{ url_for('static', filename='images/ajax-load.gif')}}" id = "img_load">
+            </div>
             <div class="row">
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-8">
                     <div id="chat">
-                        <div id = "loader">
-                                <img src="{{ url_for('static', filename='images/ajax-load.gif')}}">
-                        </div>
                         <div class="grandpy_react">
-                        <p >Bonjour, donne moi l'adresse de ton choix, et je te raconterai une anecdote !</p>
+                            <p>Bonjour, donne moi l'adresse de ton choix, et je te raconterai une anecdote !</p>
                         </div>
                     </div>
                     <form class="form-inline" method="POST">
@@ -30,7 +30,6 @@
                 </div>
                     <div class="row">
                     <div class="col-lg-6">
-                        <div id="map"></div>
                     </div>
 
                     <div class="col-lg-6"></div>
