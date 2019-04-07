@@ -2,6 +2,7 @@
 Core file, displaying all the html pages, and receive ajax's requests.
 
 """
+import os
 from flask import Flask, render_template, request, jsonify
 from config import SECRET_KEY
 from .appli.question_parser import Parser
@@ -10,9 +11,11 @@ from .appli import api_wikisearch
 
 app = Flask(__name__)
 
-app.config.from_object('config')
+app.secret_key = os.environ.get('SECRET_KEY')
+# app.config.from_object('config')
 
-app.config['SECRET_KEY'] = SECRET_KEY
+
+# app.config['SECRET_KEY'] = SECRET_KEY
 
 
 @app.route('/')
