@@ -1,6 +1,7 @@
 """
 File used to request to Google's API
 """
+import os
 import requests
 # from config import API_GOOGLE_MAP_KEY
 
