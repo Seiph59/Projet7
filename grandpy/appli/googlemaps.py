@@ -7,7 +7,7 @@ import requests
 
 GEOCODE_URL = 'https://maps.googleapis.com/maps/api/geocode/json'
 
-app.api_google_map_key = os.environ.get('API_GOOGLE_MAP_KEY')
+api_google_map_key = os.environ.get('API_GOOGLE_MAP_KEY')
 
 class GoogleException(Exception):
     """
@@ -23,7 +23,7 @@ def get_coords_from_address(input_address):
     criteria_api = {
         'address': input_address,
         'country': 'FR',
-        'key': app.api_google_map_key
+        'key': api_google_map_key
     }
 
     try:
