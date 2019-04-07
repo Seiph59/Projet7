@@ -2,7 +2,7 @@
 File used to request to Google's API
 """
 import requests
-from config import API_GOOGLE_MAP_KEY
+# from config import API_GOOGLE_MAP_KEY
 
 GEOCODE_URL = 'https://maps.googleapis.com/maps/api/geocode/json'
 
