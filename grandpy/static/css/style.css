@@ -36,17 +36,17 @@ body {
     z-index: 1000;
 }
 
-#pied{
-    position: relative;
+#footer{
+    position: fixed;
     bottom: 0;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
 }
 
 .grandpy_react{
     margin-right: 10px;
     text-align:right;
-    font-size: 20px;
+    font-size: 17px;
     color: black;
     background-color: #ACA885;
     border: 1px #918B76;
@@ -57,7 +57,7 @@ body {
 .user-conversation{
     margin-left: 10px;
     text-align: left;
-    font-size: 20px;
+    font-size: 17px;
     color:black;
     background-color:#918B76;
     border: 1px #ACA885;
@@ -88,8 +88,29 @@ body {
     align-self: right;
 }
 
+.about{
+    text-align: center;
+    margin-top: 200px;
+}
+
+#techs{
+    border: 2px black;
+    margin-top: 100px;
+}
+
+#logo-flask{
+    width: 80px;
+    height: 80px;
+}
+
 .logos
 {
     width:20px;
     height:20px;
+}
+
+.logos-about
+{
+    width:150px;
+    height:130px;
 }

@@ -1,4 +1,16 @@
 {% extends "layout.html" %}
 {% block content %}
-<link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet"/>
+
+<div class="about">
+    <h3>Damien Galasso </h3>
+
+    Etudiant Openclassrooms, dans le parcours "développeur Python"
+    </div>
+
+<div class="about" id="techs">
+    Technologies utilisées dans le projet:
+    <a href="https://www.python.org/"><img src="{{ url_for('static', filename='images/python-logo.png')}}" class="logos-about" ></a>
+    <a href="http://flask.pocoo.org/"><img src="{{ url_for('static', filename='images/flask-logo.png')}}" id="logo-flask" ></a>
+    <a href="https://getbootstrap.com/"><img src="{{ url_for('static', filename='images/bootstrap-logo.png')}}" class="logos-about" ></a>
+</div>
 {% endblock content %}
