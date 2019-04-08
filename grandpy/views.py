@@ -18,7 +18,7 @@ app.secret_key = os.environ.get('SECRET_KEY')
 # app.config['SECRET_KEY'] = SECRET_KEY
 
 
-# @app.route('/')
+@app.route('/')
 @app.route('/home')
 def home():
     """
