@@ -53,7 +53,6 @@ def search_page_content(input_id):
         res = req.json()
         url_page = res['query']['pages'][str(input_id)]['fullurl']
         intro_sentences = res['query']['pages'][str(input_id)]['extract']
-        print(intro_sentences, url_page)
         return intro_sentences, url_page
 
     except KeyError:

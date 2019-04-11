@@ -28,10 +28,19 @@ def test_request_google(monkeypatch):
 
     def mock_get(requests, params):
         class FakeResponse:
+            """
+            Mock the request from the 'get_coords_from_address' function
+            """
             def raise_for_status(self):
+                """
+                Mock 'req.raise_for_status()', in the 'get_coord....' function
+                """
                 return
 
             def json(self):
+                """
+                Mock the response format Json, in the 'get_coord....' function
+                """
                 return response
         return FakeResponse()
 
@@ -56,7 +65,13 @@ def test_request_pageid_wikimedia(monkeypatch):
 
     def mock_get_wiki(requests, params):
         class FakeResponse:
+            """
+            Mock the 'search_coordinates()' function in api_wikisearch
+            """
             def json(self):
+                """
+                Mock the response format Json, in the 'search_coo...' function
+                """
                 return response
         return FakeResponse()
 
@@ -84,7 +99,13 @@ def test_request_page_content_wiki(monkeypatch):
 
     def mock_get_wiki2(requests, params):
         class FakeResponse2:
+            """
+            Mock the 'search_page_content()
+            """
             def json(self):
+                """
+                Mock the response format Json, in the 'search_pag...' function
+                """
                 return response
         return FakeResponse2()
 

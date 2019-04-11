@@ -4,7 +4,6 @@ Core file, displaying all the html pages, and receive ajax's requests.
 """
 import os
 from flask import Flask, render_template, request, jsonify
-# from config import SECRET_KEY
 from .appli.question_parser import Parser
 from .appli import googlemaps
 from .appli import api_wikisearch
@@ -25,7 +24,7 @@ def home():
     """
     Displaying the home page, by two differents manners (/home) or (/)
     """
-    return render_template('home.html', googlemapskey = API_GOOGLE_FRONT)
+    return render_template('home.html', googlemapskey=API_GOOGLE_FRONT)
 
 
 @app.route('/about')

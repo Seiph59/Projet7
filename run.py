@@ -1,3 +1,7 @@
+"""
+Module which allow to run the server, instead of views.py
+"""
+
 from grandpy import app
 
 

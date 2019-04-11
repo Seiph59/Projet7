@@ -4,21 +4,31 @@ h1 {
 }
 
 #header{
-    font-size: 40px;
+    font-size: 38px;
     text-align: center;
     align-content: center;
+    flex-grow: 0;
 }
 
 body {
+    min-height: 100vh;
     background-color:#626C66;
     color:#E1CA96;
+    overflow-x: hidden;
+    flex-grow: 1;
 }
+
+#main{
+    height: 100%;
+}
+
 #chat{
     position: relative;
     border: 2px solid black;
-    height: 500px;
+    height: 450px;
     background-color: #E1CA96;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     overflow-y:auto;
 }
 
@@ -37,11 +47,14 @@ body {
 }
 
 #footer{
-    position: fixed;
-    bottom: 0;
-    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: auto;
+    clear: both;
     font-size: 13px;
     text-align: center;
+    flex-grow: 0;
+    padding-top: 12%;
 }
 
 .grandpy_react{
@@ -70,9 +83,8 @@ body {
 }
 
 #question{
-    position: absolute;
-    width: 96%;
-    bottom:-6px;
+    position: relative;
+    width: 100%;
     background-color: white;
     color:black;
     border-bottom-left-radius: 5px;
@@ -100,8 +112,8 @@ body {
 }
 
 #logo-flask{
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
 }
 
 .logos
@@ -112,6 +124,6 @@ body {
 
 .logos-about
 {
-    width:150px;
-    height:130px;
+    width:120px;
+    height:90px;
 }
