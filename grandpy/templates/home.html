@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
 {% block content %}
-    <meta charset="UTF-8">
     <h1>Bienvenue sur la page de GrandPy Bot !</h1>
         <div class="container">
             <div id = "loader">
@@ -38,7 +37,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/requests.js')}}" charset="utf-8"></script>
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ config['API_GOOGLE_MAP_KEY'] }}">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ googlemapskey }}">
     </script>
 
 {% endblock content %}

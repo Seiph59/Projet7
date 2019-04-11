@@ -43,7 +43,7 @@ def test_request_google(monkeypatch):
 
 def test_request_pageid_wikimedia(monkeypatch):
     """
-    Method who test the first API request for Wikimedia to recevie a page id
+    Method who test the first API request for Wikimedia to receive a page id
     """
     result = 534775
     response = {
