@@ -20,7 +20,7 @@ To create this solution, we are going to use, Python 3 , Flask and API's.
 
 # To start
 
-1. Create your vitual environment
+1. Create your virtual environment
 
 2. Pay attention to change config_ex.py in config.py
 
