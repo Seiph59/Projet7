@@ -5,16 +5,16 @@ function user_chat_and_automatic_response(){
     divElt.className = "user-conversation";
     var paraElt = document.createElement("p");
     paraElt.textContent = questionElt.value;
-    var asso = divElt.appendChild(paraElt);
-    document.getElementById("chat").appendChild(asso).className = "user-conversation";
+    divElt.appendChild(paraElt);
+    document.getElementById("chat").appendChild(divElt);
     questionElt.value = "";
 
     var divElt2 = document.createElement("div");
     divElt2.className = "grandpy_react";
     var paraElt2 = document.createElement("p");
     paraElt2.textContent = "Ah je vois...Laisse moi quelques secondes pour me souvenir";
-    var asso2 = divElt.appendChild(paraElt2);
-    document.getElementById("chat").appendChild(asso2).className = "grandpy_react";
+    divElt2.appendChild(paraElt2);
+    document.getElementById("chat").appendChild(divElt2);
 }
 
 function display_loader(){
@@ -29,15 +29,16 @@ function hide_loader(){
 
 function question_grandpy_wiki(){
     var divElt = document.createElement("div");
+    divElt.className = "grandpy_react";
     var pElt= document.createElement("p");
     pElt.textContent = "Mais t'ai-je déjà parlé de l'histoire de ce quartier ?";
-
-    document.getElementById("chat").appendChild(divElt).className = "grandpy_react";
     divElt.appendChild(pElt);
+    document.getElementById("chat").appendChild(divElt);
 }
 
 function grandpy_response_wiki(input){
     var divElt = document.createElement("div");
+    divElt.className = "grandpy_react"
     var pElt= document.createElement("p");
     pElt.textContent = input[0][0]
     var aElt = document.createElement("a");
@@ -45,9 +46,9 @@ function grandpy_response_wiki(input){
     aElt.href = input[0][1];
     aElt.textContent = "En savoir plus sur Wikipedia";
 
-    chat.appendChild(divElt).className = "grandpy_react";
     divElt.appendChild(pElt);
     divElt.appendChild(aElt);
+    chat.appendChild(divElt);
     chat.scrollTo(0, chat.scrollHeight);
 }
 

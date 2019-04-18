@@ -11,10 +11,10 @@
         <title> Grandpy Bot </title>
     {% endif %}
 </head>
-<body class=".flex-column" class=".d-flex">
+<body>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12" id="header"> Bienvenue sur le site de Grandpy Bot ! <img src="{{ url_for('static', filename='images/logo_robot.png')}}" ></div>
+                <div class="col-lg-12" id="header"> Bienvenue sur le site de Grandpy Bot ! <img src="{{ url_for('static', filename='images/logo_robot.png')}}" alt="logo-robot" ></div>
             </div>
         </div>
         <div class="container">
@@ -32,8 +32,8 @@
     <footer class="row">
         <div class="col-xs-12 col-lg-12" id="footer">
             Damien Galasso 2019
-            <a href="https://github.com/Seiph59"><img src="{{ url_for('static', filename='images/github.png')}}" class="logos" ></a>
-            <a href="https://www.linkedin.com/in/damien-g-60109523/"><img src="{{ url_for('static', filename='images/linkedin.png')}}" class="logos" ></a>
+            <a href="https://github.com/Seiph59"><img src="{{ url_for('static', filename='images/github.png')}}" alt="logo-github" class="logos" ></a>
+            <a href="https://www.linkedin.com/in/damien-g-60109523/"><img src="{{ url_for('static', filename='images/linkedin.png')}}" alt="logo-linkedin" class="logos" ></a>
         </div>
     </footer>
 </body>

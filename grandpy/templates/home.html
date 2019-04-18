@@ -3,7 +3,7 @@
     <h1>Bienvenue sur la page de GrandPy Bot !</h1>
         <div class="container">
             <div id = "loader">
-                <img src="{{ url_for('static', filename='images/ajax-load.gif')}}" id = "img_load">
+                <img src="{{ url_for('static', filename='images/ajax-load.gif')}}" id = "img_load" alt="loader">
             </div>
             <div class="row" id="main">
                 <div class="col-lg-2">
@@ -16,7 +16,7 @@
                     </div>
                     <form class="form-inline" method="POST">
                         <p id = "input_question">
-                        <input type="text"name="input_address" id="question" autofocus placeholder="ex: 6 place de l'étoile 75000 Paris" />
+                        <input type="text" name="input_address" id="question" autofocus placeholder="ex: 6 place de l'étoile 75000 Paris" />
                         </p>
                     </form>
                 </div>
@@ -25,19 +25,15 @@
         </div>
                 <div class="col-lg-2"></div>
 
-                </div>
                     <div class="row">
                     <div class="col-lg-6">
                     </div>
 
                     <div class="col-lg-6"></div>
             </div>
-        </div>
     <script src="{{ url_for('static', filename='js/ajax.js')}}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='js/requests.js')}}" charset="utf-8"></script>
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ googlemapskey }}">
-    </script>
+    <script src="{{ url_for('static', filename='js/requests.js')}}"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ googlemapskey }}"></script>
 
 {% endblock content %}

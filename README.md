@@ -11,21 +11,24 @@ This project has for objective to give informations about a place or an address 
 # How ?
 To create this solution, we are going to use, Python 3 , Flask and API's.
 
-# Libraries Used and Python Version: 
+# Libraries Used and Python Version:
 
 * Python 3.7.1
+* Flask 1.0.2
 * Requests
 * Pytest
 
 # To start
 
-1. Pay attention to change config_ex.py in config.py 
+1. Create your vitual environment
 
-2. Insert your Googlemap API Key
+2. Pay attention to change config_ex.py in config.py
 
-3. If you want to check test, you need to install the Pytest Library
+3. Insert your Googlemap API Key
 
-4. For launch the app => python run.py
+4. If you want to check test, you need to install the Pytest Library
+
+5. For launch the app => python run.py
 
 
 

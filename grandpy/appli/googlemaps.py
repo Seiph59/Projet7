@@ -22,7 +22,6 @@ def get_coords_from_address(input_address):
     """
     Send an address to the google Geocode API, to receive coordinates
     """
-    print(input_address)
     criteria_api = {
         'address': input_address,
         'country': 'FR',
